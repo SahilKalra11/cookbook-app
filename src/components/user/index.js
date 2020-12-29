@@ -1,0 +1,72 @@
+import React, { useState, useEffect } from "react";
+import "./style.css";
+import { signOut } from "../../redux/reducers/LoginReducer";
+import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import { getCred } from "../../utility/generalMethods";
+const User = (props) => {
+  const { history } = useHistory();
+  const GoBack = () => {
+    this.history.goBack();
+  };
+
+  const [user, setuser] = useState({
+    email: "",
+    token: "",
+    password: "",
+  });
+
+  useEffect(() => {
+    const cred = getCred();
+    setuser(cred);
+    console.log(cred);
+  }, []);
+
+  const handleSignout = (e) => {
+    props.signOut();
+    history.push("/auth/login");
+  };
+
+  return (
+    <div className="root">
+      <header className="header">
+        <div className="back-button">
+          <span onClick={(e) => GoBack()}>
+            <img src="../../images/back.png" />
+          </span>
+        </div>
+      </header>
+      <div className="single-recipe">
+        {user && user.email ? (
+          <div className="profileContainer">
+            <div className="imgWrapper ">
+              <img src="../../images/profile.png" />
+            </div>
+            <div className="profileContent">
+              <p>Email Id: {user.email}</p>
+            </div>
+            <div className="profileSignOut">
+              <button onClick={handleSignout} className="signoutButton">
+                Sign Out
+              </button>
+            </div>
+          </div>
+        ) : (
+          <p>Please Login To Continue</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  signOut: () => dispatch(signOut()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(User);

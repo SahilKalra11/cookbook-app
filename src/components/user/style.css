@@ -1,0 +1,55 @@
+.root {
+  justify-content: space-between;
+}
+.header {
+  padding: 20px 20px;
+  align-items: flex-start;
+}
+.back-button {
+  width: 15px;
+}
+.back-button img {
+  width: 100%;
+}
+.single-recipe {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.profileContainer .imgWrapper {
+  width: 90px;
+  margin: auto;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 35px;
+  background: #e4e6e7;
+  height: 90px;
+  overflow: hidden;
+}
+.profileContainer .imgWrapper img {
+  width: 100%;
+}
+.profileContainer {
+  text-align: center;
+}
+.profileContainer .profileContent {
+  margin: 40px 0px;
+}
+.profileContainer .profileContent h3 {
+  padding: 15px 0px;
+  color: #ed595b;
+  font-size: 40px;
+}
+.profileSignOut {
+  margin: 30px 0px;
+  display: inline-block;
+}
+.profileSignOut a.signoutButton {
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  padding: 15px 60px;
+  text-decoration: none;
+  box-shadow: 0px 1px 4px 1px #0000008c;
+  font-weight: 400;
+}

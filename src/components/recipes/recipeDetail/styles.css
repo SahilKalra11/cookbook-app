@@ -1,0 +1,50 @@
+.item-content .form-group label {
+  width: 100%;
+  display: block;
+  padding-bottom: 10px;
+}
+.item-content .form-group input,
+.item-content .form-group select,
+.item-content .form-group textarea {
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: none;
+  box-shadow: 0px 1px 3px 1px #dcdcdc;
+  border-radius: 30px;
+}
+.item-content .form-group {
+  margin-bottom: 25px;
+}
+.item-content .form-group input:focus,
+.item-content .form-group select:focus,
+.item-content .form-group textarea:focus {
+  outline: none;
+}
+.submit-button {
+  background: #64b903;
+  color: #fff;
+  border: none;
+  padding: 10px 70px;
+  border-radius: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
+  box-shadow: 0px 1px 2px 2px #e2e2e2;
+}
+.submit {
+  text-align: center;
+}
+.add-ingrediants {
+  padding-top: 15px;
+  display: block;
+  font-size: 15px;
+  color: #64b903;
+}
+.img-wrap {
+  position: relative;
+  width: 60%;
+  max-width: 300px;
+  height: auto;
+  overflow: hidden;
+}
+/* input[type=file] */

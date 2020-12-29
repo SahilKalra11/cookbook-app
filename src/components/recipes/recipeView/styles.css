@@ -1,0 +1,133 @@
+.single-recipe .image-sec .imagewrapper img {
+  border-radius: 0px;
+}
+.cooktime-sec {
+  clear: both;
+}
+.cooktime-sec ul {
+  display: flex;
+  padding: 0px;
+  list-style-type: none;
+}
+.cooktime-sec ul li {
+  flex: 0 50%;
+}
+.cooktime-sec ul li h3 {
+  font-size: 15px;
+}
+.cooktime-sec ul li p {
+  font-size: 20px;
+}
+.item-content {
+  padding: 5px 25px 0px;
+}
+.item-content-left {
+  display: inline-block;
+  width: 100%;
+}
+.item-content-left .float-left {
+  float: left;
+  display: inline-block;
+}
+.item-content-left .float-right {
+  float: right;
+  display: inline-block;
+}
+.item-content-left .float-right .edit-item,
+.item-content-left .float-right .delete-item {
+  width: 15px;
+  display: block;
+  display: inline-block;
+  height: 14px;
+  margin-right: 10px;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0px 1px 3px 3px #e6e6e6;
+}
+.item-content-left .float-right .edit-item {
+  background: #64b903;
+}
+.item-content-left .float-right .delete-item {
+  background: red;
+}
+.item-content-left .float-right .edit-item img {
+  width: 100%;
+}
+.item-content-left .float-right .delete-item img {
+  width: 100%;
+  position: relative;
+  left: 1px;
+}
+.header {
+  padding: 20px 20px;
+  align-items: flex-start;
+}
+.back-button {
+  width: 15px;
+}
+.back-button img {
+  width: 100%;
+}
+.single-recipe {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.item-content {
+  height: 100%;
+}
+.image-sec {
+  margin-bottom: 25px;
+}
+.ingrediants-sec {
+  margin-top: 20px;
+  clear: both;
+}
+.ingrediants-sec ul,
+.preparation-step ul {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+.ingrediants-sec ul li,
+.preparation-step ul li {
+  padding-bottom: 10px;
+}
+.single-recipe .item-content {
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 30px;
+}
+.single-recipe .item-content .form-group:last-child {
+  margin-bottom: 120px;
+}
+
+.inplace-confirm {
+  position: relative;
+}
+.inplace-confirm .main-body {
+  text-align: center;
+  padding: 10px 20px;
+  color: #000;
+  font-size: 14px;
+  background: #fff;
+  border: 2px solid gainsboro;
+  position: absolute;
+  right: 7%;
+  bottom: -20px;
+  box-shadow: 5px 10px gainsboro;
+}
+.inplace-confirm .main-body button {
+  width: 40px;
+  border-radius: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #949494;
+  color: #fff;
+  border: none;
+}
