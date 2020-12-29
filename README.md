@@ -1,4 +1,4 @@
-dephion Code challenge
+Dephion Code challenge
 
 This is a simple fullstack Project for a cookbook webapp with React and Redux. 
 
