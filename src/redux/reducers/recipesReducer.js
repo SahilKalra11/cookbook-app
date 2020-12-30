@@ -122,35 +122,6 @@ const recipesReducer = (state = initialState, action) => {
       return newState;
   }
 };
-/*
-export const getSingleRecipe = (id) => {
-  return async (dispatch, getState) => {
-    try {
-      // let { recipes } = getState();
-      // recipes = recipes.recipes;
-      // // console.log("state at ", getState());
-
-      // if (!recipes || recipes.length < 1) {
-      //   // throw new Error("recipes are empty");
-      //   console.log("Recipes are empty");
-      // }
-
-      // const recipe = recipes.find((val) => val.id == id);
-
-      // if (!recipe) {
-      //   // throw new Error("Recipe Not Found");
-      //   console.log("Recipe not Found");
-      // }
-
-
-
-      dispatch(recipeAction.loadCurrentRecipe(recipe));
-    } catch (err) {
-      console.log(err);
-    }
-  };
-};
-*/
 
 export const fetchAllRecipes = () => {
   return async (dispatch) => {
