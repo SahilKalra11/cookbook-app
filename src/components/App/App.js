@@ -6,7 +6,7 @@ import { fetchAllRecipes } from "../../redux/reducers/recipesReducer";
 
 import { connect } from "react-redux";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   hasRecipes = this.props.hasRecipes;
@@ -31,6 +31,7 @@ class App extends Component {
           <p>Loading...</p>
         ) : (
           <Switch>
+            <Redirect exact from="/" to="/recipes" />
             <Route
               exact
               path="/auth/login"

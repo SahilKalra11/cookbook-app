@@ -85,7 +85,7 @@
       ],
       "cookTime": 30,
       "description": "The salmon was poached in olive oil along with a sachet of fresh picked herbs and garlic. This process highlighted the richness of the fish. Serve with rice or roasted potatoes and a vegetable and or",
-      "isFavourite": false
+      "isFavourite": true
     },
     {
       "id": 4,
@@ -136,7 +136,27 @@
       ],
       "cookTime": 60,
       "description": "Stir-Fried Broccoli with Chili and Sichuan Pepper (Qiang Xi Nan Hua Cai)",
-      "isFavourite": false
+      "isFavourite": true
+    },
+    {
+      "name": "dasasd",
+      "imageUrl": "blob:http://localhost:3000/2de957bd-324f-481d-bdf6-79ed5237f8df",
+      "votes": "4",
+      "ingredients": [
+        "dasdas",
+        "dasdasdsadas"
+      ],
+      "steps": [
+        "dasdasdsadas",
+        "dasdasdsadas",
+        "dasdasdsadas",
+        "dasdasdsadas"
+      ],
+      "serving": "4",
+      "cooktime": "5",
+      "description": "dadasdadas\ndass\ndadasdadas\ndassdadasdadas\ndass",
+      "id": 7,
+      "isFavourite": true
     }
   ]
 }

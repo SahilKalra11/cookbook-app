@@ -69,7 +69,28 @@
 .login-form input:focus{
     outline: none;
 }
-
+.submit-button {
+    background: #f3b100;
+    color: #fff;
+    border: none;
+    padding: 10px 70px;
+    border-radius: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
+    background-position: center;
+    transition: background 0.5s;
+}
+.submit-button:hover, .submit-button:focus {
+  outline: none;
+  background: #f3b100 radial-gradient(circle, transparent 1%, #f3b100 1%) center/15000%;
+  cursor: pointer;
+}
+.submit-button:active{
+  background-color: #e5e5e5!important;
+  background-size: 100%;
+  transition: background 0s;
+  outline: none!important;
+}
 @media only screen and (min-width: 767px) {
     .login {
       width: 50%;

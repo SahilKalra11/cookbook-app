@@ -164,7 +164,7 @@ const RecipeDetail = (props) => {
   };
 
   const GoBack = () => {
-    this.history.goBack();
+    window.history.back();
   };
 
   const handleImage = (e) => {

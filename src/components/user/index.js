@@ -6,8 +6,10 @@ import { connect } from "react-redux";
 import { getCred } from "../../utility/generalMethods";
 const User = (props) => {
   const { history } = useHistory();
+  
+
   const GoBack = () => {
-    this.history.goBack();
+    window.history.back();
   };
 
   const [user, setuser] = useState({
