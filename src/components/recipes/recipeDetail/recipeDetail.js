@@ -285,13 +285,15 @@ const RecipeDetail = (props) => {
   };
 
   return (
-    <div className="root">
+    <div className="root addRecipe">
       <header className="header">
+        <h3>Add Recipe</h3>
         <div className="back-button">
           <span onClick={(e) => GoBack()}>
             <img src="../../images/back.png" />
           </span>
         </div>
+        
       </header>
       <div className="single-recipe edit-recipe">
         <div className="item-content">

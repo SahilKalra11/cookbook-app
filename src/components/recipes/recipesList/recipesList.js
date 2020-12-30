@@ -10,6 +10,8 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 // import { getSingleRecipe } from "../../../redux/reducers/recipesReducer";
 
+import "./styles.css";
+
 class RecipesList extends Component {
   history = this.props.history;
   dispatch = this.props.dispatch;
@@ -87,7 +89,6 @@ class RecipesList extends Component {
   };
 
   render() {
-    // console.log("recipes are ", this.props.recipes);
 
     const { recipes, Api } = this.props;
 

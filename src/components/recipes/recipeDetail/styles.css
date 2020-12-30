@@ -58,6 +58,14 @@
   height: auto;
   overflow: hidden;
 }
+.addRecipe .header { 
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.addRecipe .header h3{ 
+  margin: auto;
+}
 .edit-recipe .form-group{
   position: relative;
 }
