@@ -36,17 +36,18 @@ const User = (props) => {
           </span>
         </div>
       </header>
-      <div className="single-recipe">
+  <div className="single-recipe profile-sec">
         {user && user.email ? (
           <div className="profileContainer">
             <div className="imgWrapper ">
               <img src="../../images/profile.png" />
             </div>
             <div className="profileContent">
+              <h3>Account Details</h3>
               <p>Email Id: {user.email}</p>
             </div>
             <div className="profileSignOut">
-              <button onClick={handleSignout} className="signoutButton">
+              <button onClick={handleSignout} className="signoutButton submit-button">
                 Sign Out
               </button>
             </div>

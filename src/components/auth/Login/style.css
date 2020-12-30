@@ -23,22 +23,22 @@
     padding: 40px;
     box-shadow: 0px -1px 9px 1px #7d7d7d;
     margin: auto;
-    background: #ffffffd1;    
     z-index: 1;
+    backdrop-filter: blur(8px);
 }
 .login h3{
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 25px;
+    color:#f3b100!important;
 }
 .login h3 span{
-    color: #64b903!important;
+    color: #f3b100!important;
     text-transform: uppercase;
     display: block;
     font-size: 25px;
     font-weight: 800;
     margin-top: 10px;
-    text-shadow: 0px 1px 2px #c7c7c7;
 }
 .login-form input{
     height: 45px;
@@ -52,6 +52,9 @@
     box-shadow: 0px 2px 4px 2px #b7b7b7;
     margin-bottom: 20px;
     padding-left: 20px;    
+}
+.login-form input:hover, .login-form input:focus{
+    background:#000
 }
 .overlay{
     position: absolute;

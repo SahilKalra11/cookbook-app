@@ -94,8 +94,12 @@ class RecipesList extends Component {
     let { searchText, filteredRecipes } = this.state;
 
     return (
-      <div className="root">
+      <div className="root" className="recipeList">
         <header className="row search-bar">
+          <div class="bannerImgWrapper">
+              <img src="../../images/login_banner.jpg" />
+          </div>
+            
           <div className="form-group">
             <span className="fa fa-search form-control-feedback"></span>
             <input
@@ -121,7 +125,7 @@ class RecipesList extends Component {
             </div>
           </div>
           <ul>
-            {Api.isLoading ? <p>Loading...</p> : null}
+            {Api.isLoading ? <p class="loading-text">Loading...</p> : null}
             {filteredRecipes.length == 0 && !Api.isLoading ? (
               <p>No Records Found</p>
             ) : (
@@ -136,162 +140,6 @@ class RecipesList extends Component {
                 );
               })
             )}
-
-            {/* <li className="item">
-              <div className="imagewrapper">
-                <img src="images/recipe-1.jpg" />
-                <span className="favourite-icon">
-                  <a href="#">
-                    <i className="fa fa-heart" aria-hidden="true"></i>
-                  </a>
-                </span>
-              </div>
-              <div className="item-content">
-                <h3>Italian Pizza</h3>
-                <p>World Food</p>
-                <div class="stars-icon">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="item">
-              <div className="imagewrapper">
-                <img src="images/recipe-2.jpg" />
-                <span className="favourite-icon">
-                  <a href="#">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                  </a>
-                </span>
-              </div>
-              <div className="item-content">
-                <h3>Italian Pizza</h3>
-                <p>World Food</p>
-                <div className="stars-icon">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="item">
-              <div className="imagewrapper">
-                <img src="images/recipe-2.jpg" />
-                <span className="favourite-icon">
-                  <a href="#">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                  </a>
-                </span>
-              </div>
-              <div className="item-content">
-                <h3>Italian Pizza</h3>
-                <p>World Food</p>
-                <div class="stars-icon">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="item">
-              <div className="imagewrapper">
-                <img src="images/recipe-2.jpg" />
-                <span className="favourite-icon">
-                  <a href="#">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                  </a>
-                </span>
-              </div>
-              <div className="item-content">
-                <h3>Italian Pizza</h3>
-                <p>World Food</p>
-                <div className="stars-icon">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="item">
-              <div className="imagewrapper">
-                <img src="images/recipe-2.jpg" />
-                <span className="favourite-icon">
-                  <a href="#">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                  </a>
-                </span>
-              </div>
-              <div className="item-content">
-                <h3>Italian Pizza</h3>
-                <p>World Food</p>
-                <div class="stars-icon">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-              </div>
-            </li> */}
           </ul>
         </div>
       </div>

@@ -293,7 +293,7 @@ const RecipeDetail = (props) => {
           </span>
         </div>
       </header>
-      <div className="single-recipe">
+      <div className="single-recipe edit-recipe">
         <div className="item-content">
           <form onSubmit={onSubmit}>
             <div className="form-group">
@@ -339,18 +339,9 @@ const RecipeDetail = (props) => {
                 disabled={Status.InProgress}
               />
               {showError("Name")}
-              {/* <InputCtrl
-                control={control}
-                showError={showError}
-                type="text"
-                placeholder="Recipe Name"
-                name="Name"
-                required={true}
-                className="form-control"
-                disabled={Staus.InProgress}
-              /> */}
+             
             </div>
-            <div className="form-group">
+            <div className="form-group edit-ingredients">
               <label for="Ingredients">Add Ingredients</label>
 
               <Chips
@@ -426,7 +417,7 @@ const RecipeDetail = (props) => {
               {showError("votes")}
             </div>
 
-            <div className="form-group">
+            <div className="form-group description">
               <label htmlFor="Description">Description</label>
               <textarea
                 disabled={Status.InProgress}
@@ -440,7 +431,7 @@ const RecipeDetail = (props) => {
               ></textarea>
               {showError("Description")}
             </div>
-            <div className="form-group">
+            <div className="form-group preparation">
               <label htmlFor="prepSteps">Preparation Steps</label>
 
               <Chips

@@ -144,23 +144,6 @@ class RecipeView extends Component {
               <div className="float-left">
                 <h3>{singleRecipe.name}</h3>
                 <p>Master the king of dishes</p>
-                {/* <div className="stars-icon">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div> */}
                 {this.renderVotes(singleRecipe.votes)}
               </div>
               <div className="float-right">
@@ -208,10 +191,6 @@ class RecipeView extends Component {
                       <li key={index}>{ing}</li>
                     ))
                   : null}
-                {/* <li>sticks unsalted butter</li>
-                <li>English muffins opened</li>
-                <li>eggs,plus 3 egg yolks, divided</li>
-                <li>tablespoons lemon juice</li> */}
               </ul>
             </div>
             <div className="preparation-step">
@@ -221,11 +200,7 @@ class RecipeView extends Component {
                   ? singleRecipe.steps.map((step, index) => (
                       <li key={index}>{step}</li>
                     ))
-                  : null}
-                {/* <li>sticks unsalted butter</li>
-                <li>English muffins opened</li>
-                <li>eggs,plus 3 egg yolks, divided</li>
-                <li>tablespoons lemon juice</li> */}
+                  : null}              
               </ul>
             </div>
           </div>

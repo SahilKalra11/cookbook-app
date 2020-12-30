@@ -19,7 +19,7 @@ const AddChip = (props) => {
         className="form-control"
         placeholder={placeholder}
       />
-      <button onClick={handleClick} className="btn btn-default">
+      <button onClick={handleClick} className="btn btn-default addButton">
         + Add {name}
       </button>
     </form>
