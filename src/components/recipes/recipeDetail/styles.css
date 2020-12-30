@@ -29,10 +29,18 @@
     border-radius: 30px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 15px;
+    background-position: center;
+    transition: background 0.5s;
 }
 .submit-button:hover, .submit-button:focus {
   outline: none;
-  background: #f3b100;
+  background: #f3b100 radial-gradient(circle, transparent 1%, #f3b100 1%) center/15000%;
+}
+.submit-button:active{
+  background-color: #e5e5e5!important;
+  background-size: 100%;
+  transition: background 0s;
+  outline: none!important;
 }
 .submit {
   text-align: center;
@@ -50,7 +58,9 @@
   height: auto;
   overflow: hidden;
 }
-
+.edit-recipe .form-group{
+  position: relative;
+}
 .edit-recipe .form-group .img-wrap{
   max-width:100%;
   height: 250px;
@@ -79,4 +89,11 @@
   height: auto!important;
   padding:15px;
   resize: none;
+}
+.edit-recipe .error-block{
+  right: 0px;
+  background: #000;
+  color: #fff;
+  top: 0px;
+  z-index: 1;
 }

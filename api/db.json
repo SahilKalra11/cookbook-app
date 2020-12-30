@@ -29,7 +29,7 @@
       ],
       "cookTime": 30,
       "description": "The spinach soup with roasted tofu is naturally gluten-free and is suitable as a main meal, as well as an appetizer.",
-      "isFavourite": true
+      "isFavourite": false
     },
     {
       "id": 2,
@@ -62,7 +62,7 @@
       ],
       "cookTime": 20,
       "description": "Grated Kohlrabi Salad with Beetroot, Carrot, Cucumber and Sprouts",
-      "isFavourite": true
+      "isFavourite": false
     },
     {
       "id": 3,
