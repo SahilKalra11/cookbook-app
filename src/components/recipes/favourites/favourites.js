@@ -135,7 +135,7 @@ class FavouriteRecipe extends Component {
           <ul>
             {Api.isLoading ? <p class="loading-text">Loading...</p> : null}
             {filteredRecipes.length == 0 && !Api.isLoading ? (
-              <p>No Records Found</p>
+              <p>No Favourite Recipe</p>
             ) : (
               filteredRecipes.map((recipe, idx) => {
                 return (

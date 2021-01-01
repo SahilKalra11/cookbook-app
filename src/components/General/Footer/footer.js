@@ -10,11 +10,6 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link to="/recipes">
-            <i className="fa fa-search" aria-hidden="true"></i>
-          </Link>
-        </li>
-        <li>
           <Link to="/recipes/favourites">
             <i className="fa fa-heart" aria-hidden="true"></i>
           </Link>

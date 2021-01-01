@@ -263,22 +263,6 @@ export const RemoveFavourite = (recipe, id) => async (dispatch, getState) => {
   }
 };
 
-// export const GetFavourites = () => (dispatch, getState) => {
-//   try {
-//     let { recipes } = getState().recipes;
-//     if (recipes && recipes.length) {
-//       const favourites = recipes.filter((recipe) => recipe.isFavourite);
-//       return favourites;
-//     } else {
-//       recipes = await dispatch(fetchAllRecipes());
-//       if (recipes && recipes.length) {
-//         const favourites = recipes.filter((recipe) => recipe.isFavourite);
-//         return favourites;
-//       }
-//     }
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
+
 
 export default recipesReducer;
