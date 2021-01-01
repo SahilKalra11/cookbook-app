@@ -11,7 +11,7 @@ import { Recipes } from "../../utility/Endpoints";
 
 const initialState = {
   recipes: [],
-  favourites: [],
+
   hasRecipes: false,
   currentRecipe: {
     id: 0,
@@ -89,7 +89,7 @@ const recipesReducer = (state = initialState, action) => {
 
         newState = {
           ...newState,
-          favourites: newState.favourites.concat(id),
+
           recipes: [...temp],
         };
 
@@ -108,7 +108,7 @@ const recipesReducer = (state = initialState, action) => {
 
         newState = {
           ...newState,
-          favourites: newState.favourites.filter((fav) => fav != id),
+
           recipes: [...temp],
         };
 
@@ -132,10 +132,9 @@ export const fetchAllRecipes = () => {
       console.log(result);
       const { data } = result;
 
-      console.log("recipes are ", data);
-
       dispatch(apiActions.fetchSuccess(data));
       dispatch(recipeAction.loadRecipe(data));
+      return data;
     } catch (error) {
       dispatch(apiActions.fetchError(error.message));
     }
@@ -197,7 +196,6 @@ export const updateRecipe = (recipe) => async (dispatch) => {
     dispatch(apiActions.fetchRequest());
 
     const result = await PutData(Recipes, id, recipe);
-    console.log("recipe is ", result.data);
 
     const { data } = result;
 
@@ -258,11 +256,29 @@ export const RemoveFavourite = (recipe, id) => async (dispatch, getState) => {
 
       await dispatch(updateRecipe(recipe));
 
-      dispatch(recipeAction.removeFavourite(id));
+      const res = dispatch(recipeAction.removeFavourite(id));
     }
   } catch (error) {
     console.log(error.message);
   }
 };
+
+// export const GetFavourites = () => (dispatch, getState) => {
+//   try {
+//     let { recipes } = getState().recipes;
+//     if (recipes && recipes.length) {
+//       const favourites = recipes.filter((recipe) => recipe.isFavourite);
+//       return favourites;
+//     } else {
+//       recipes = await dispatch(fetchAllRecipes());
+//       if (recipes && recipes.length) {
+//         const favourites = recipes.filter((recipe) => recipe.isFavourite);
+//         return favourites;
+//       }
+//     }
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
 
 export default recipesReducer;

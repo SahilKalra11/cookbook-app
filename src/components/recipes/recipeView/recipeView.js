@@ -52,7 +52,7 @@ class RecipeView extends Component {
   };
 
   toggleFavourite = (id) => {
-    const { currentRecipe, favourites } = this.props.recipes;
+    const { currentRecipe } = this.props.recipes;
 
     let index1;
 
@@ -62,26 +62,13 @@ class RecipeView extends Component {
 
       if (isFavourite) {
         this.props.RemoveFavourite(currentRecipe, id);
+
         return;
       } else {
         this.props.MakeFavourite(currentRecipe, id);
         return;
       }
     }
-    //SECOND METHOD TO ADD OR REMOVE FAVOURITES
-    /*
-    if (favourites) {
-      index1 = favourites.indexOf(id);
-      if (index1 === -1) {
-          this.props.MakeFavourite(id);
-          return;
-      }
-      else { 
-        this.props.RemoveFavourite(id);
-        return;
-      }
-    }
-    */
   };
 
   renderVotes = (votes) => {
@@ -200,7 +187,7 @@ class RecipeView extends Component {
                   ? singleRecipe.steps.map((step, index) => (
                       <li key={index}>{step}</li>
                     ))
-                  : null}              
+                  : null}
               </ul>
             </div>
           </div>
@@ -211,8 +198,13 @@ class RecipeView extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state.recipes);
+
   return {
     recipes: state.recipes,
+
+    currentRecipe: state.recipes.currentRecipe,
+
     Api: state.Api,
   };
 };

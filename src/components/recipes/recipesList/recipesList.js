@@ -29,7 +29,7 @@ class RecipesList extends Component {
       searchText: e.target.value,
     });
 
-    let updatedRecipes = this.state.recipes;
+    let updatedRecipes = this.props.recipes;
 
     updatedRecipes = updatedRecipes.filter((item) => {
       return (
@@ -79,7 +79,6 @@ class RecipesList extends Component {
     if (this.props.recipes && this.props.recipes.length) {
       this.setState({
         filteredRecipes: [...this.props.recipes],
-        recipes: [...this.props.recipes],
       });
     }
   };
@@ -89,7 +88,6 @@ class RecipesList extends Component {
   };
 
   render() {
-
     const { recipes, Api } = this.props;
 
     let { searchText, filteredRecipes } = this.state;
@@ -98,9 +96,9 @@ class RecipesList extends Component {
       <div className="root" className="recipeList">
         <header className="row search-bar">
           <div class="bannerImgWrapper">
-              <img src="../../images/login_banner.jpg" />
+            <img src="../../images/login_banner.jpg" />
           </div>
-            
+
           <div className="form-group">
             <span className="fa fa-search form-control-feedback"></span>
             <input

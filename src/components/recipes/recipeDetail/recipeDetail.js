@@ -180,11 +180,23 @@ const RecipeDetail = (props) => {
         recipeImageError: false,
       });
     }
-    SetRecipeImage({
-      ...recipeImage,
-      file,
-      preview: URL.createObjectURL(file),
-    });
+
+    let reader = new FileReader();
+
+    reader.onloadend = () => {
+      SetRecipeImage({
+        file: file,
+        preview: reader.result,
+      });
+    };
+
+    reader.readAsDataURL(file);
+
+    // SetRecipeImage({
+    //   ...recipeImage,
+    //   file,
+    //   preview: URL.createObjectURL(file),
+    // });
   };
 
   const saveData = async (data) => {
@@ -269,7 +281,7 @@ const RecipeDetail = (props) => {
       description: state.Description,
     };
 
-    console.log(data, state);
+    // console.log(data, state);
 
     saveData(data);
 
@@ -287,13 +299,12 @@ const RecipeDetail = (props) => {
   return (
     <div className="root addRecipe">
       <header className="header">
-        <h3>Add Recipe</h3>
+        <h3>{editMode ? "Edit Recipe" : "Add Recipe"}</h3>
         <div className="back-button">
           <span onClick={(e) => GoBack()}>
             <img src="../../images/back.png" />
           </span>
         </div>
-        
       </header>
       <div className="single-recipe edit-recipe">
         <div className="item-content">
@@ -341,7 +352,6 @@ const RecipeDetail = (props) => {
                 disabled={Status.InProgress}
               />
               {showError("Name")}
-             
             </div>
             <div className="form-group edit-ingredients">
               <label for="Ingredients">Add Ingredients</label>
@@ -355,7 +365,6 @@ const RecipeDetail = (props) => {
                 onAdd={handleAddChip}
                 onChange={(e) => setChipInput(e.target.value)}
               />
-              
             </div>
             <div className="form-group">
               <label htmlFor="Cooking time">Cooking TIme</label>
@@ -373,7 +382,6 @@ const RecipeDetail = (props) => {
               />
 
               {showError("Cooktime")}
-
             </div>
             <div className="form-group">
               <label htmlFor="Serving">Number Of Serving</label>

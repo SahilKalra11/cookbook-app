@@ -1,4 +1,4 @@
-import User from "../components/user";
+import User from "../components/user/user";
 import RecipeList from "../components/recipes/recipesList/recipesList";
 import RecipeDetail from "../components/recipes/recipeDetail/recipeDetail";
 
@@ -19,6 +19,11 @@ const routes = [
   },
   {
     exact: true,
+    Component: FavouriteRecipe,
+    path: "/recipes/favourites",
+  },
+  {
+    exact: true,
     Component: RecipeDetail,
     path: "/recipes/add",
   },
@@ -31,12 +36,6 @@ const routes = [
     exact: true,
     Component: RecipeView,
     path: "/recipes/view/:recipe_id",
-  },
-
-  {
-    exact: true,
-    Component: FavouriteRecipe,
-    path: "/recipes/favourites",
   },
 ];
 
