@@ -29,7 +29,7 @@
       ],
       "cookTime": 30,
       "description": "The spinach soup with roasted tofu is naturally gluten-free and is suitable as a main meal, as well as an appetizer.",
-      "isFavourite": false
+      "isFavourite": true
     },
     {
       "id": 2,
@@ -85,7 +85,7 @@
       ],
       "cookTime": 30,
       "description": "The salmon was poached in olive oil along with a sachet of fresh picked herbs and garlic. This process highlighted the richness of the fish. Serve with rice or roasted potatoes and a vegetable and or",
-      "isFavourite": false
+      "isFavourite": true
     },
     {
       "id": 4,
@@ -116,7 +116,7 @@
       ],
       "cookTime": 20,
       "description": "it is highly recommended to line the mold with baking paper so that it does not stick and thus avoid any unpleasant surprises",
-      "isFavourite": false
+      "isFavourite": true
     },
     {
       "id": 5,
