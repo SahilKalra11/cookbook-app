@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import "./Style.scss";
 import { signOut } from "../../redux/reducers/LoginReducer";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { getCred } from "../../utility/generalMethods";
 const User = (props) => {
   const { history } = useHistory();
-  
-
   const GoBack = () => {
     window.history.back();
   };
-
   const [user, setuser] = useState({
     email: "",
     token: "",
     password: "",
   });
-
   useEffect(() => {
     const cred = getCred();
     setuser(cred);
-    console.log(cred);
   }, []);
 
   const handleSignout = (e) => {

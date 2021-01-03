@@ -27,7 +27,7 @@
         "Melt coconut oil in a pot and add flour all at once whisking vigorously. Stir occasionally until the roux gets light brownish",
         "Deglaze roux with vegetable broth and add all ingredients, simmer for 5 minutes"
       ],
-      "cookTime": 30,
+      "cooktime": 30,
       "description": "The spinach soup with roasted tofu is naturally gluten-free and is suitable as a main meal, as well as an appetizer.",
       "isFavourite": true
     },
@@ -60,7 +60,7 @@
         "Peel kohlrabi, carrots and beetroot and grater coarsely all together with the cucumber (alternatively: chop coarsely and blend briefly)",
         "Mix everything well and serve with the sprouts"
       ],
-      "cookTime": 20,
+      "cooktime": 20,
       "description": "Grated Kohlrabi Salad with Beetroot, Carrot, Cucumber and Sprouts",
       "isFavourite": true
     },
@@ -83,7 +83,7 @@
       "steps": [
         "Leave salmon out for 1 hour to get to room temperature, wash and dry salmon salt and pepper set aside. In a small pot large enough to fit your pieces of fish, pour in olive oil, enough to just cover the fish. Add in a sachet made with cheese cloth of thyme, rosemary, sage and garlic cloves unpeeled and flattened with the back of a knife. If you don't have cheese cloth put herbs and garlic right in oil. Heat up to 180 degrees add fish and set timer for 12 minutes. Remove and serve with lemon slices or wedges, salt and pepper and a drizzle of olive oil."
       ],
-      "cookTime": 30,
+      "cooktime": 30,
       "description": "The salmon was poached in olive oil along with a sachet of fresh picked herbs and garlic. This process highlighted the richness of the fish. Serve with rice or roasted potatoes and a vegetable and or",
       "isFavourite": true
     },
@@ -114,7 +114,7 @@
         "Add the semi-whipped cream, mix until completely integrated, pour the cream cheese over the biscuit base, cover with plastic wrap and store in the refrigerator until it has completely solidified.",
         "Cover the cake with the blueberry jam and carefully unmold."
       ],
-      "cookTime": 20,
+      "cooktime": 20,
       "description": "it is highly recommended to line the mold with baking paper so that it does not stick and thus avoid any unpleasant surprises",
       "isFavourite": true
     },
@@ -134,7 +134,7 @@
       "steps": [
         "Cut broccoli into florets, and cut large florets lengthwise into smaller pieces.  Peel the stalk and slice thickly.  Snip the chilis into halves or sections and discard the seeds as much as possible. Bring a generous 2 1/2 quarts of water to a boil, add 1 tsp salt and 1 tbsp oil.  Add broccoli and blanch for 2-3 minutes.  Broccoli should be bright and crisp.  Drain in a colander. Add remaining oil with the chilies and Sichuan peppercorns to a seasoned wok over high heat.  Stir-fry briefly until the chilis are just beginning to brown (take care not to burn them).  Add the broccoli and stir-fry for 30 seconds or so until the florets are coated in the fragrant oil, seasoning with salt to taste.  Turn off the heat, stir in the sesame oil, and serve."
       ],
-      "cookTime": 60,
+      "cooktime": 60,
       "description": "Stir-Fried Broccoli with Chili and Sichuan Pepper (Qiang Xi Nan Hua Cai)",
       "isFavourite": false
     }

@@ -18,7 +18,7 @@ import {
 } from "../../../redux/reducers/recipesReducer";
 import { connect } from "react-redux";
 
-import "./styles.css";
+import "./styles.scss";
 
 const initialValues = {
   Name: "",
@@ -80,7 +80,6 @@ const RecipeDetail = (props) => {
         props.addPrepStep(chipInput);
       }
     }
-    console.log("chip add ", state[name]);
   };
 
   const handleDeleteChip = (name, chip) => {
@@ -106,7 +105,6 @@ const RecipeDetail = (props) => {
       const Recipe = await props.getSingleRecipe(recipe_id);
 
       if (Recipe) {
-        console.log(Recipe);
         setState({
           Name: Recipe.name,
           imageUrl: Recipe.imageUrl,
@@ -192,11 +190,6 @@ const RecipeDetail = (props) => {
 
     reader.readAsDataURL(file);
 
-    // SetRecipeImage({
-    //   ...recipeImage,
-    //   file,
-    //   preview: URL.createObjectURL(file),
-    // });
   };
 
   const saveData = async (data) => {
@@ -266,7 +259,6 @@ const RecipeDetail = (props) => {
     const errorObj = await validateSchema(AddRecipeSchema, data);
 
     if (errorObj.isError) {
-      console.log(errorObj.message);
       return;
     }
 
@@ -279,12 +271,8 @@ const RecipeDetail = (props) => {
       serving: state.Serving,
       cooktime: state.Cooktime,
       description: state.Description,
-    };
-
-    // console.log(data, state);
-
+    };    
     saveData(data);
-
     return;
   };
 
@@ -297,16 +285,16 @@ const RecipeDetail = (props) => {
   };
 
   return (
-    <div className="root addRecipe">
+    <React.Fragment>
       <header className="header">
-        <h3>{editMode ? "Edit Recipe" : "Add Recipe"}</h3>
         <div className="back-button">
           <span onClick={(e) => GoBack()}>
             <img src="../../images/back.png" />
           </span>
         </div>
+        <h3>{editMode ? "Edit Recipe" : "Add Recipe"}</h3>
       </header>
-      <div className="single-recipe edit-recipe">
+      <div className="main edit-recipe">
         <div className="item-content">
           <form onSubmit={onSubmit}>
             <div className="form-group">
@@ -459,7 +447,7 @@ const RecipeDetail = (props) => {
               <button
                 disabled={Error.isError}
                 type="submit"
-                className="btn btn-primary submit-button"
+                className="button submit-button"
               >
                 Submit
               </button>
@@ -467,7 +455,7 @@ const RecipeDetail = (props) => {
           </form>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

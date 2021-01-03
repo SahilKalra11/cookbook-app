@@ -9,7 +9,7 @@ import {
   validateSchema,
 } from "../../../utility/validation";
 import { loginUser } from "../../../redux/reducers/LoginReducer";
-import "./style.css";
+import "./Style.scss";
 
 let initialValues = {
   email: "",
@@ -172,7 +172,7 @@ const Login = (props) => {
             </div>
             <div className="form-group text-center">
               <button
-                className="submit-button"
+                className="button login-button"
                 type="submit"
                 disabled={errors.isError}
               >

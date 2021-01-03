@@ -24,7 +24,6 @@ export default class SelectCtrl extends Component {
         <Controller
           render={({ onChange, onBlur, value }) => (
             <>
-              {/* {console.log(value, this.props.options)} */}
               <select
                 onChange={onChange}
                 value={value}

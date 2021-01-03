@@ -1,9 +1,9 @@
-import User from "../components/user/user";
-import RecipeList from "../components/recipes/recipesList/recipesList";
-import RecipeDetail from "../components/recipes/recipeDetail/recipeDetail";
+import User from "../components/user/User";
+import RecipeList from "../components/recipes/recipesList/RecipesList";
+import RecipeDetail from "../components/recipes/recipeDetail/RecipeDetail";
 
-import RecipeView from "../components/recipes/recipeView/recipeView";
-import FavouriteRecipe from "../components/recipes/favourites/favourites";
+import RecipeView from "../components/recipes/recipeView/RecipeView";
+import FavouriteRecipe from "../components/recipes/favourites/Favourites";
 
 const routes = [
   { path: "/", exact: true },
@@ -20,7 +20,7 @@ const routes = [
   {
     exact: true,
     Component: FavouriteRecipe,
-    path: "/recipes/favourites",
+    path: "/recipes/Favourites",
   },
   {
     exact: true,

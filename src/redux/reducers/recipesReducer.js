@@ -129,7 +129,6 @@ export const fetchAllRecipes = () => {
       await dispatch(apiActions.fetchRequest());
 
       const result = await GetAllData(Recipes);
-      console.log(result);
       const { data } = result;
 
       dispatch(apiActions.fetchSuccess(data));
@@ -145,12 +144,8 @@ export const fetchSingleRecipe = (id) => {
   return async (dispatch) => {
     try {
       dispatch(apiActions.fetchRequest());
-
       const result = await GetSingleData(Recipes, id);
-      console.log("recipe is ", result.data);
-
       const { data } = result;
-
       dispatch(apiActions.fetchSuccess(data));
       dispatch(recipeAction.loadCurrentRecipe(data));
       return data;
@@ -165,16 +160,10 @@ export const addRecipe = (recipe) => async (dispatch) => {
     if (!recipe) {
       throw new Error("Invalid Recipe Entered");
     }
-
     dispatch(apiActions.fetchRequest());
-
     const result = await PostData(Recipes, recipe);
-    console.log("recipe is ", result.data);
-
     const { data } = result;
-
     dispatch(apiActions.fetchSuccess(data));
-
     dispatch(recipeAction.addRecipe(recipe));
     return recipe;
   } catch (error) {
@@ -213,14 +202,9 @@ export const deleteRecipe = (id) => async (dispatch) => {
     if (!id) {
       throw new Error("id not found");
     }
-
     dispatch(apiActions.fetchRequest());
-
     const result = await DeleteData(Recipes, id);
-    console.log("recipe is ", result.data);
-
     const { data } = result;
-
     dispatch(apiActions.fetchSuccess(data));
 
     dispatch(recipeAction.deleteRecipe(id));
@@ -242,7 +226,7 @@ export const MakeFavourite = (recipe, id) => async (dispatch, getState) => {
       dispatch(recipeAction.makeFavourite(id));
     }
   } catch (error) {
-    console.log(error.message);
+    //console.log(error.message);
   }
 };
 
@@ -253,9 +237,7 @@ export const RemoveFavourite = (recipe, id) => async (dispatch, getState) => {
         ...recipe,
         isFavourite: false,
       };
-
       await dispatch(updateRecipe(recipe));
-
       const res = dispatch(recipeAction.removeFavourite(id));
     }
   } catch (error) {

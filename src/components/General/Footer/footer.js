@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Style.scss";
+
 const Footer = () => {
   return (
     <footer className="navbar">

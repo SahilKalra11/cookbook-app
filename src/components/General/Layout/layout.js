@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import Content from "../Content/content";
-import Footer from "../Footer/footer";
+
+import Content from "../Content/Content";
+import Footer from "../Footer/Footer";
 
 import { IsLoggedIn } from "../../../utility/generalMethods";
 import { useHistory } from "react-router-dom";
@@ -14,10 +15,10 @@ const Layout = (props) => {
   }, []);
 
   return (
-    <div className="main">
+    <React.Fragment>
       <Content />
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
-import Login from "../auth/Login/login";
-import Layout from "../General/Layout/layout";
+import "./App.scss";
+import Loader from "react-loader-spinner";
+import Login from "../auth/Login/Login";
+import Layout from "../General/Layout/Layout";
 import { fetchAllRecipes } from "../../redux/reducers/recipesReducer";
 import { connect } from "react-redux";
 
@@ -31,8 +32,8 @@ class App extends Component {
   render() {
     return (
       <Router>
-        {this.Api.isLoading ? (
-          <p>Loading...</p>
+        {this.Api.loading ? (
+          <Loader type="Puff" color="yellow" height={100} width={100} />
         ) : (
           <Switch>
             {/* <Redirect exact from="/" to="/recipes" /> */}

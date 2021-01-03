@@ -109,12 +109,11 @@ class FavouriteRecipe extends Component {
     let { searchText, filteredRecipes } = this.state;
 
     return (
-      <div className="root" className="recipeList">
+      <React.Fragment>
         <header className="row search-bar">
           <div class="bannerImgWrapper">
             <img src="../../images/login_banner.jpg" />
           </div>
-
           <div className="form-group">
             <span className="fa fa-search form-control-feedback"></span>
             <input
@@ -126,10 +125,10 @@ class FavouriteRecipe extends Component {
             />
           </div>
         </header>
-        <div className="Recipes main">
+        <div className="recipes main">
           <div className="heading">
             <span className="float-left">
-              <h3>Recipes</h3>
+              <h3>Favourite Recipes</h3>
             </span>
           </div>
           <ul>
@@ -150,7 +149,7 @@ class FavouriteRecipe extends Component {
             )}
           </ul>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

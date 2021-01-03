@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import "./Style.scss";
 import { signOut } from "../../redux/reducers/LoginReducer";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
@@ -29,20 +29,21 @@ const User = (props) => {
     }
   }, []);
 
-  const handleSignout = (e) => {
-    props.signOut();
+  const handleSignout = async (e) => {
+    await props.signOut();
 
     history.push("/auth/login");
   };
 
   return (
-    <div className="root">
+    <React.Fragment>
       <header className="header">
         <div className="back-button">
           <span onClick={(e) => GoBack()}>
             <img src="../../images/back.png" />
           </span>
         </div>
+        <h3>Profile Details</h3>
       </header>
       <div className="single-recipe profile-sec">
         {user && user.email ? (
@@ -57,7 +58,7 @@ const User = (props) => {
             <div className="profileSignOut">
               <button
                 onClick={handleSignout}
-                className="signoutButton submit-button"
+                className="button signout-button "
               >
                 Sign Out
               </button>
@@ -67,7 +68,7 @@ const User = (props) => {
           <p>Please Login To Continue</p>
         )}
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 

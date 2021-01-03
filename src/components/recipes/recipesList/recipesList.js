@@ -8,9 +8,8 @@ import { IsLoggedIn } from "../../../utility/generalMethods";
 import SingleRecipe from "../SingleRecipe/SingleRecipe";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-// import { getSingleRecipe } from "../../../redux/reducers/recipesReducer";
 
-import "./styles.css";
+import "./Styles.scss";
 
 class RecipesList extends Component {
   history = this.props.history;
@@ -93,7 +92,7 @@ class RecipesList extends Component {
     let { searchText, filteredRecipes } = this.state;
 
     return (
-      <div className="root" className="recipeList">
+      <React.Fragment>
         <header className="row search-bar">
           <div class="bannerImgWrapper">
             <img src="../../images/login_banner.jpg" />
@@ -110,7 +109,7 @@ class RecipesList extends Component {
             />
           </div>
         </header>
-        <div className="Recipes main">
+        <div className="recipes main">
           <div className="heading">
             <span className="float-left">
               <h3>Recipes</h3>
@@ -141,7 +140,7 @@ class RecipesList extends Component {
             )}
           </ul>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

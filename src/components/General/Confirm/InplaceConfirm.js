@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Styles.scss";
 
 const InplaceConfirm = (props) => {
   const [ViewConfirm, SetViewConfirm] = useState(false);

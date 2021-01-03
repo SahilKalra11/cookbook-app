@@ -45,16 +45,12 @@ export const validateInputs = async (name, value, errors) => {
     isError: false,
     errorMessage: "",
   };
-
-  console.log(name, value);
-
   switch (name) {
     case "Name": {
       await yup
         .reach(AddRecipeSchema, name)
         .validate(value)
         .catch((err) => {
-          console.log("yes error");
           errorObj = {
             isError: true,
             errorMessage: err.errors[0],
@@ -177,9 +173,7 @@ export const validateSchema = async (schema, data) => {
   };
 
   if (schema && data) {
-    console.log(data);
     await schema.validate(data).catch((err) => {
-      console.log(err);
       errorObj = {
         ...errorObj,
         isError: true,

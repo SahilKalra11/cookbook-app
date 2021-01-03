@@ -9,7 +9,7 @@ import {
 } from "../../../redux/reducers/recipesReducer";
 import InplaceConfirm from "../../General/Confirm/InplaceConfirm";
 
-import "./styles.css";
+import "./Styles.scss";
 
 class RecipeView extends Component {
   history = this.props.history;
@@ -28,14 +28,9 @@ class RecipeView extends Component {
 
     try {
       recipe_id = Number(recipe_id);
-
       if (recipe_id) {
         await this.props.getSingleRecipe(recipe_id);
-
         const currentRecipe = this.props.currentRecipe;
-
-        console.log("current Recipe is ", currentRecipe);
-
         if (!currentRecipe) {
           throw new Error("recipe not found");
         }
@@ -43,7 +38,7 @@ class RecipeView extends Component {
         throw new Error("No Id is provided");
       }
     } catch (error) {
-      console.log(error.message);
+      //console.log(error.message);
     }
   };
 
@@ -89,13 +84,12 @@ class RecipeView extends Component {
       let { recipe_id } = this.params;
       if (recipe_id) {
         const result = await this.props.deleteRecipe(recipe_id);
-        console.log(result);
         this.GoBack();
       } else {
         throw new Error("No Id is Provided");
       }
     } catch (error) {
-      console.log("error is ", error.message);
+      //console.log("error is ", error.message);
     }
   };
 
@@ -103,7 +97,7 @@ class RecipeView extends Component {
     const singleRecipe = this.props.recipes.currentRecipe;
 
     return (
-      <div className="root">
+      <React.Fragment>
         <header className="header">
           <div className="back-button">
             <span onClick={(e) => this.GoBack()}>
@@ -111,7 +105,7 @@ class RecipeView extends Component {
             </span>
           </div>
         </header>
-        <div className="single-recipe">
+        <div className="main single-recipe">
           <div className="item-content">
             <div className="image-sec">
               <div className="imagewrapper">
@@ -192,13 +186,12 @@ class RecipeView extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.recipes);
 
   return {
     recipes: state.recipes,
